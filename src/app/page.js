@@ -78,7 +78,7 @@ export default function LandingPage() {
         <section className="flex-1 flex flex-col items-center justify-center px-4 text-center mt-8 mb-12">
           <h1 className={`text-5xl md:text-6xl font-extrabold mb-4 tracking-tight ${darkMode ? 'text-blue-200' : 'text-blue-800'}`}>BizSnap</h1>
           <h2 className={`text-2xl md:text-3xl font-semibold mb-2 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`}>Know any business in seconds</h2>
-          <p className={`max-w-xl mx-auto text-lg md:text-xl mb-8 ${darkMode ? 'text-gray-300' : 'text-gray-800'}`}>Search any company and get AI-generated insights on their history, revenue, model, and strategy — instantly.</p>
+          <p className={`max-w-xl mx-auto text-lg md:text-xl mb-8 ${darkMode ? 'text-gray-300' : 'text-gray-800'}`}>Search any company and get AI-generated insights on their history, revenue, model, and strategy &mdash; instantly.</p>
           <Link href={"/search"} className={`inline-block px-8 py-4 rounded-xl font-bold text-xl shadow transition ${darkMode ? 'bg-blue-700 text-white hover:bg-blue-800' : 'bg-blue-600 text-white hover:bg-blue-700'}`}>Try it now</Link>
         </section>
 
@@ -87,7 +87,7 @@ export default function LandingPage() {
           <div className={`rounded-2xl shadow-lg p-8 flex flex-col items-center text-center border ${darkMode ? 'bg-gray-900 border-blue-900' : 'bg-white border-blue-100'}`}>
             <span className="text-4xl mb-4">🔍</span>
             <h3 className={`text-xl font-bold mb-2 ${darkMode ? 'text-blue-200' : 'text-blue-800'}`}>Company History & Strategy</h3>
-            <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Get a concise overview of any company's background, origin, and business strategy.</p>
+            <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Get a concise overview of any company&apos;s background, origin, and business strategy.</p>
           </div>
           <div className={`rounded-2xl shadow-lg p-8 flex flex-col items-center text-center border ${darkMode ? 'bg-gray-900 border-blue-900' : 'bg-white border-blue-100'}`}>
             <span className="text-4xl mb-4">📊</span>
