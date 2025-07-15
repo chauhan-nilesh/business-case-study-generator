@@ -36,19 +36,19 @@ export default function HomePage() {
   return (
     <div className={darkMode ? "dark" : ""}>
       {/* Header for mobile */}
-      <header className="md:hidden flex items-center justify-between px-4 py-3 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 shadow sticky top-0 z-30 h-16 min-h-16">
+      <header className={`md:hidden flex items-center justify-between px-4 py-3 border-b shadow sticky top-0 z-30 h-16 min-h-16 ${darkMode ? 'bg-gray-950 border-gray-800 text-blue-100' : 'bg-white border-gray-200 text-blue-700'}`}>
         <button
           aria-label="Open sidebar"
           onClick={() => setSidebarOpen(true)}
-          className="p-2 rounded-lg bg-blue-600 text-white dark:bg-indigo-700 dark:text-white shadow"
+          className={`p-2 rounded-lg shadow ${darkMode ? 'bg-indigo-700 text-white' : 'bg-blue-600 text-white'}`}
         >
           <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
-        <span className={`text-xl font-extrabold bg-clip-text ${darkMode ? 'bg-gradient-to-r from-blue-300 via-indigo-200 to-purple-300 text-transparent' : 'bg-gradient-to-r from-blue-700 via-indigo-600 to-purple-700 text-transparent drop-shadow-md'}`}>CaseGen</span>
+        <span className={`text-xl font-extrabold bg-clip-text ${darkMode ? 'bg-gradient-to-r from-blue-300 via-indigo-200 to-purple-300 text-transparent' : 'bg-gradient-to-r from-blue-700 via-indigo-600 to-purple-700 text-transparent drop-shadow-md'}`}>BizSnap</span>
         <button
           aria-label="Toggle dark mode"
           onClick={() => setDarkMode((d) => !d)}
-          className="rounded-full p-2 bg-white/80 dark:bg-gray-800/80 shadow"
+          className={`rounded-full p-2 shadow ${darkMode ? 'bg-gray-800 text-blue-100' : 'bg-white/80 text-blue-700'}`}
         >
           {darkMode ? (
             <svg width="24" height="24" fill="none" stroke="#fbbf24" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg>
@@ -126,7 +126,7 @@ export default function HomePage() {
           {/* Center info for mobile */}
           <div className="md:hidden flex-1 flex flex-col items-center justify-center text-center py-10 overflow-y-auto">
             <h1 className={`text-3xl font-extrabold mb-4 bg-clip-text ${darkMode ? 'bg-gradient-to-r from-blue-300 via-indigo-200 to-purple-300 text-transparent' : 'bg-gradient-to-r from-blue-700 via-indigo-600 to-purple-700 text-transparent drop-shadow-md'}`}>Business Profile Generator</h1>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">Generate AI-powered business profiles for any company. Search, view history, and manage your profile.</p>
+            <p className="text-zinc-900 dark:text-gray-300 mb-6">Generate AI-powered business profiles for any company. Search, view history, and manage your profile.</p>
           </div>
           {/* Desktop main card */}
           <div className={`hidden md:block w-full max-w-2xl mx-auto p-8 rounded-2xl shadow-2xl border relative ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'}`}>
@@ -199,7 +199,7 @@ export default function HomePage() {
           </div>
           {/* Mobile input fixed at bottom */}
           {selectedSidebar === "New Chat" && (
-            <form onSubmit={handleSubmit} className="md:hidden fixed bottom-0 left-0 w-full flex items-center gap-2 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 px-4 py-3 z-20">
+            <form onSubmit={handleSubmit} className={`md:hidden fixed bottom-0 left-0 w-full flex items-center gap-2 border-t px-4 py-3 z-20 ${darkMode ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'}`}>
               <input
                 type="text"
                 placeholder="Enter company name (e.g., Zara)"
